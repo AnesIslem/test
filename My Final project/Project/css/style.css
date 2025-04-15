@@ -1,0 +1,228 @@
+
+
+:root {
+    font-size: 18px;
+    --background-color: rgb(75 49 18);
+    --background-color-hover: hwb(33 29% 45%);
+    --text-color: aliceblue;
+    --text-color-hover: rgb(37, 30, 30);
+    --item-width: 150px;
+    --box-width: 200px;
+    --container-width: 1200px;
+  }
+  body{
+    height: 100%;
+    background-image:url('../images/city2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  nav {
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: var(--container-width);
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .menu-item > a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    width: var(--item-width);
+    text-align: center;
+  }
+  
+  .menu-item > a:hover {
+    background-color: var(--background-color-hover);
+    color: var(--text-color-hover);
+    width: fit-content;
+  }
+  .list{
+    width:300px;
+    height: 70px;
+    padding-top: 7px;
+    margin-top: 20px;
+    background-color: rgb(95, 95, 95);
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    cursor: pointer;
+    border-style: outset;
+    border-color: rgb(100, 110, 110);
+    display: inline-block;
+    text-align: center;
+    }
+  .list:hover{
+    background-color: rgb(168, 164, 164);
+  }
+#box2{
+  justify-self:end;
+  margin-top: 100px;
+  margin-left: 600px;
+}
+h3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  color: rgb(0, 0, 0);
+  
+}
+#box1{
+  margin-left: 40px;
+}
+  .box{
+    background-color: rgba(245, 216, 181, 0.199);
+    position: absolute;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-style: inset;
+    text-align: center;
+    width: 400px;
+    height:300px;
+  }
+
+
+
+
+  /* General Layout */
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--background-color);
+  padding: 20px;
+  color: var(--text-color);
+  position: fixed;
+}
+
+.sidebar h2 {
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--background-color-hover);
+  color: var(--text-color-hover);
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.submenu li {
+  padding: 5px 0;
+}
+
+.submenu li a {
+  font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+  
+  /* Sidebar Styles */
+.admin-sidebar {
+  width: 250px;
+  height: calc(100vh - 60px);
+  background-color: #2c3e50;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.admin-sidebar.collapsed {
+  transform: translateX(-250px);
+}
+
+/* Main Content Adjustment */
+.main-content {
+  margin-left: 250px;
+  transition: all 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 0;
+}
+
+/* Dropdown Menu Styles */
+.menu-item.active .submenu {
+  max-height: 500px;
+}
+
+.menu-item.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: rgba(0,0,0,0.1);
+}
+
+.dropdown-icon {
+  transition: transform 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-sidebar {
+      transform: translateX(-250px);
+  }
+  
+  .admin-sidebar.visible {
+      transform: translateX(0);
+  }
+  
+  .main-content {
+      margin-left: 0;
+  }
+}

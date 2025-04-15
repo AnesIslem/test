@@ -1,0 +1,50 @@
+h7{
+    color: red;
+    font-weight: bold;
+}
+body{
+    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formulaire{
+    margin-left: 30%;
+    width: max-content;
+}
+.box{
+   background-color:rgba(241, 239, 236, 0.856);
+   border-radius: 10px;
+   width: max-content;
+   max-height: 1000px;
+   padding-top: 20px;
+   padding-left: 30px;
+   padding-right:30px ;
+   padding-bottom:20px ;
+   text-align:justify;
+   justify-content: flex-start;
+  
+  
+}
+.box:hover{
+    font-size: large;
+    transition: 3ms;
+    box-shadow: 0px -1px 20px 10px hwb(0 18% 75% / 0.271);
+}
+
+.btn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 37%;
+}
+div > input{
+    border-radius: 5px;
+    height: 30px;
+    margin-left:5px;
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
+}
+.general{
+    display: inline-flex;
+}
+.general > div{
+margin-right: 30px;
+}
